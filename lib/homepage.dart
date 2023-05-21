@@ -16,14 +16,33 @@ class _HomepageState extends State<Homepage> {
       ),
       body: Column(
         children: [
-          Container(
-            decoration: BoxDecoration(
+          Expanded(
+            child: Container(
+              color: Colors.white,
+              child: Container(
+                margin: EdgeInsets.all(10),
+
+                color: Colors.orange,
+                // where to position the child
+
+                child: const Center(
+                  child: Text(
+                    'Lorem Ipsum dolor set amet consecturjksdk sndfnsdf jrsnjd sjnvsjd svnvsjdn s sfjsh sh uhsu hshfj suhs  s ushuf hsu u su s huu fu au',
+                    style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+              flex: 3,
+              child: Container(
                 color: Colors.red,
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            width: MediaQuery.of(context).size.width,
-            child: Text(
-                ' Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitiamolestiae quas vel sint commodi repudiandae consequuntur voluptatum laborummquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumtio, eaque rerum! Provident similique accus'),
-          )
+                child: Column(
+                  children: [],
+                ),
+              )),
         ],
       ),
     );
