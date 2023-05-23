@@ -40,11 +40,39 @@ class _HomepageState extends State<Homepage> {
               child: Container(
                 color: Colors.red,
                 child: Column(
-                  children: [],
+                  children: const [
+                    answer(),
+                    answer(),
+                    answer(),
+                  ],
                 ),
               )),
         ],
       ),
+    );
+  }
+}
+
+class answer extends StatelessWidget {
+  const answer({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(left: 30, top: 40, right: 30),
+      height: 100,
+      decoration: BoxDecoration(
+          color: Colors.yellow, borderRadius: BorderRadius.circular(20)),
+      child: const Center(
+          child: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Text(
+          'LoremI psnsdjdfbsidfjasd sjkbfjksdbj sb sjdvbvjsdf  s husfbjsd sjh s h jfisif a fsa  has fsh h',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+      )),
     );
   }
 }
