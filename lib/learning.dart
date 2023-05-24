@@ -9,6 +9,14 @@ class Learning extends StatefulWidget {
 }
 
 class _LearningState extends State<Learning> {
+  void quizData() {
+    try {
+      String getData = jsonDecode('assets/questions.json');
+    } catch (error) {
+      print(error);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
