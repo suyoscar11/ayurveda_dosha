@@ -6,11 +6,11 @@
     "option3": "Methodical Thinking and action"
   },
   "question2": "My Learning Process is",
-  "answer2": [
-    "I learn quickly and forget quickly",
-    "Purposeful learning",
-    "Learn slowly with high level of retention"
-  ],
+  "answer2": {
+    "option1": "I learn quickly and forget quickly",
+    "option2": "Purposeful learning",
+    "option3": "Learn slowly with high level of retention"
+  },
   "question3": "My Working Mechanism is",
   "answer3": {
     "option1": "Like multiple tasks at a time",
