@@ -1,15 +1,13 @@
-import 'package:flutter/material.dart';
+class Quiz {
+  final String question;
+  final List<String> answers;
 
-class Question {
-  final String id;
-  final String title;
-  final Map<String, bool> options;
+  Quiz({required this.question, required this.answers});
 
-  Question({required this.id, required this.title, required this.options});
-
-  @override
-  String toString() {
-    // TODO: implement toString
-    return 'Question(id: $id, title: $title, options: $options)';
+  factory Quiz.fromJson(Map<String, dynamic> json) {
+    return Quiz(
+      question: json['question'],
+      answers: List<String>.from(json['answers']),
+    );
   }
 }
