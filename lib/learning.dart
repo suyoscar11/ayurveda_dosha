@@ -8,30 +8,36 @@ class Learning extends StatefulWidget {
   State<Learning> createState() => _LearningState();
 }
 
+final data = jsonDecode('assets/questions.json');
+
+List<String> questions = [
+  "My reaction to the challenges",
+  "My Learning Process is",
+  "My Working Mechanism is",
+  "My Sleep pattern is",
+  "My Fight and flight response is",
+  "My emotions",
+  "My reaction to stress",
+  "My Personality is",
+  "My Concentration is",
+  "My Plan for the next five years",
+];
+
+// List<String> answer1 = [
+//   "Easily overstimulated",
+//   "Strong reaction to the challenges",
+//   "Methodical Thinking and action",
+// ];
+
+// List<String> answer2 = [
+//   "Like multiple tasks at a time",
+//   "Selective Task at a time",
+//   "Need stimulation to do work",
+// ];
+
+int questionNumber = 0;
+
 class _LearningState extends State<Learning> {
-  // void quizData() {
-  //   try {
-  //     dynamic decodedData = jsonDecode('assets/questions.json');
-  //   } catch (error) {
-  //     print(error);
-  //   }
-  // }
-
-  List<String> questions = [
-    "My reaction to the challenges",
-    "My Learning Process is",
-    "My Working Mechanism is",
-    "My Sleep pattern is",
-    "My Fight and flight response is",
-    "My emotions",
-    "My reaction to stress",
-    "My Personality is",
-    "My Concentration is",
-    "My Plan for the next five years",
-  ];
-
-  int questionNumber = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,13 +72,13 @@ class _LearningState extends State<Learning> {
                 child: Column(
                   children: [
                     answer(
-                      answerText: '',
+                      answerText: data['answer1']['option1'],
                     ),
                     answer(
-                      answerText: '',
+                      answerText: data['answer1']['option2'],
                     ),
                     answer(
-                      answerText: '',
+                      answerText: data['answer1']['option3'],
                     ),
                     const SizedBox(
                       height: 20,
@@ -82,7 +88,17 @@ class _LearningState extends State<Learning> {
                         height: 50,
                         width: 100,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              questionNumber++;
+
+                              if (questionNumber > 10) {
+                                print('object');
+                              }
+                            });
+
+                            print(questionNumber);
+                          },
                           child: Text('Next'),
                         ),
                       ),
@@ -105,7 +121,7 @@ class answer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 30, top: 40, right: 30),
-      height: 100,
+      height: 80,
       decoration: BoxDecoration(
           color: Colors.yellow, borderRadius: BorderRadius.circular(20)),
       child: Center(
