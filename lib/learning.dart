@@ -9,13 +9,28 @@ class Learning extends StatefulWidget {
 }
 
 class _LearningState extends State<Learning> {
-  void quizData() {
-    try {
-      String getData = jsonDecode('assets/questions.json');
-    } catch (error) {
-      print(error);
-    }
-  }
+  // void quizData() {
+  //   try {
+  //     dynamic decodedData = jsonDecode('assets/questions.json');
+  //   } catch (error) {
+  //     print(error);
+  //   }
+  // }
+
+  List<String> questions = [
+    "My reaction to the challenges",
+    "My Learning Process is",
+    "My Working Mechanism is",
+    "My Sleep pattern is",
+    "My Fight and flight response is",
+    "My emotions",
+    "My reaction to stress",
+    "My Personality is",
+    "My Concentration is",
+    "My Plan for the next five years",
+  ];
+
+  int questionNumber = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +49,9 @@ class _LearningState extends State<Learning> {
                 color: Colors.orange,
                 // where to position the child
 
-                child: const Center(
+                child: Center(
                   child: Text(
-                    'Lorem Ipsum dolor set amet consecturjksdk sndfnsdf jrsnjd sjnvsjd svnvsjdn s sfjsh sh uhsu hshfj suhs  s ushuf hsu u su s huu fu au',
+                    questions[questionNumber],
                     style: TextStyle(fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
@@ -59,6 +74,19 @@ class _LearningState extends State<Learning> {
                     answer(
                       answerText: '',
                     ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Center(
+                      child: SizedBox(
+                        height: 50,
+                        width: 100,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text('Next'),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               )),

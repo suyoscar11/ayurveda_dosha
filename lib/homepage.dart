@@ -10,16 +10,6 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  List<Quiz> quizList = [];
-
-  @override
-  void initState() {
-    super.initState();
-    loadQuizdata();
-  }
-
-  void loadQuizdata() async {}
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

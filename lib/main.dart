@@ -1,4 +1,5 @@
 import 'package:ayurveda_dosha/homepage.dart';
+import 'package:ayurveda_dosha/learning.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +17,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Homepage());
+        home: Learning());
   }
 }
