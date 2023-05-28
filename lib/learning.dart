@@ -8,8 +8,6 @@ class Learning extends StatefulWidget {
   State<Learning> createState() => _LearningState();
 }
 
-final data = jsonDecode('assets/questions.json');
-
 List<String> questions = [
   "My reaction to the challenges",
   "My Learning Process is",
@@ -23,19 +21,23 @@ List<String> questions = [
   "My Plan for the next five years",
 ];
 
-// List<String> answer1 = [
-//   "Easily overstimulated",
-//   "Strong reaction to the challenges",
-//   "Methodical Thinking and action",
-// ];
-
-// List<String> answer2 = [
-//   "Like multiple tasks at a time",
-//   "Selective Task at a time",
-//   "Need stimulation to do work",
-// ];
+List<String> answers = [
+  "Easily overstimulated",
+  "Strong reaction to the challenges",
+  "Methodical Thinking and action",
+  "I learn quickly and forget quickly",
+  "Purposeful learning",
+  "Learn slowly with high level of retention",
+  "Like multiple tasks at a time",
+  "Selective Task at a time",
+  "Need stimulation to do work",
+];
 
 int questionNumber = 0;
+int a = 0;
+int b = 1;
+int c = 2;
+int integer = 1;
 
 class _LearningState extends State<Learning> {
   @override
@@ -72,13 +74,13 @@ class _LearningState extends State<Learning> {
                 child: Column(
                   children: [
                     answer(
-                      answerText: data['answer1']['option1'],
+                      answerText: answers[a],
                     ),
                     answer(
-                      answerText: data['answer1']['option2'],
+                      answerText: answers[b],
                     ),
                     answer(
-                      answerText: data['answer1']['option3'],
+                      answerText: answers[c],
                     ),
                     const SizedBox(
                       height: 20,
@@ -91,13 +93,15 @@ class _LearningState extends State<Learning> {
                           onPressed: () {
                             setState(() {
                               questionNumber++;
-
-                              if (questionNumber > 10) {
-                                print('object');
-                              }
+                              a = a + 3;
+                              b = b + 3;
+                              c = c + 3;
+                              // if (questionNumber >= questions.length - 1) {
+                              //   print('object');
+                              // }
                             });
 
-                            print(questionNumber);
+                            // print(questionNumber);
                           },
                           child: Text('Next'),
                         ),
