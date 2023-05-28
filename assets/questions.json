@@ -1,62 +1,64 @@
-{
-  "question1": "My reaction to the challenges",
-  "answer1": {
-    "option1": "Easily overstimulated",
-    "option2": "Strong reaction to the challenges",
-    "option3": "Methodical Thinking and action"
-  },
-  "question2": "My Learning Process is",
-  "answer2": {
-    "option1": "I learn quickly and forget quickly",
-    "option2": "Purposeful learning",
-    "option3": "Learn slowly with high level of retention"
-  },
-  "question3": "My Working Mechanism is",
-  "answer3": {
-    "option1": "Like multiple tasks at a time",
-    "option2": "Selective Task at a time",
-    "option3": "Need stimulation to do work"
-  },
-  "question4": "My Sleep pattern is",
-  "answer4": {
-    "option1": "Hard to fall asleep and stay asleep",
-    "option2": "Goal-oriented sleep",
-    "option3": "Easily fall asleep and can sleep for a long time"
-  },
-  "question5": "My Fight and flight response is",
-  "answer5": {
-    "option1": "Frequently and easily triggered",
-    "option2": "Turns on strongly to reach a goal and then turn off",
-    "option3": "Not easily evoked"
-  },
-  "question6": "My emotions",
-  "answer6": {
-    "option1": "Moods change quickly. Anxious, fearful, uncertain, Too many choices confuse me",
-    "option2": "Strong Emotions, Ambitious and like to make plans, I get irritated when get interrupted",
-    "option3": "Calm and happy and peace-loving"
-  },
-  "question7": "My reaction to stress",
-  "answer7": {
-    "option1": "Get angry quickly and calm down quickly",
-    "option2": "Once get angry, difficult to calm down",
-    "option3": "Rarely get angry"
-  },
-  "question8": "My Personality is",
-  "answer8": {
-    "option1": "Light of heart and quick to speak",
-    "option2": "Strong will, passionate leader",
-    "option3": "Easy Personality, loving and caring"
-  },
-  "question9": "My Concentration is",
-  "answer9": {
-    "option1": "Easy to get distracted",
-    "option2": "Moderate, depends upon how interesting is the topic",
-    "option3": "Hard to get distracted"
-  },
-  "question10": "My Plan for the next five years",
-  "answer10": {
-    "option1": "I have multiple plans, I do like changes but I am also sometimes worried about my future",
-    "option2": "I want to grow in my career, to have more responsibility and appreciation, I have a clear plan to have security and resources.",
-    "option3": "I dislike too many changes in my life, I need more time to rest, relax and to be by myself."
+[
+  {
+    "question1": "My reaction to the challenges",
+    "answer1": {
+      "option1": "Easily overstimulated",
+      "option2": "Strong reaction to the challenges",
+      "option3": "Methodical Thinking and action"
+    },
+    "question2": "My Learning Process is",
+    "answer2": {
+      "option1": "I learn quickly and forget quickly",
+      "option2": "Purposeful learning",
+      "option3": "Learn slowly with high level of retention"
+    },
+    "question3": "My Working Mechanism is",
+    "answer3": {
+      "option1": "Like multiple tasks at a time",
+      "option2": "Selective Task at a time",
+      "option3": "Need stimulation to do work"
+    },
+    "question4": "My Sleep pattern is",
+    "answer4": {
+      "option1": "Hard to fall asleep and stay asleep",
+      "option2": "Goal-oriented sleep",
+      "option3": "Easily fall asleep and can sleep for a long time"
+    },
+    "question5": "My Fight and flight response is",
+    "answer5": {
+      "option1": "Frequently and easily triggered",
+      "option2": "Turns on strongly to reach a goal and then turn off",
+      "option3": "Not easily evoked"
+    },
+    "question6": "My emotions",
+    "answer6": {
+      "option1": "Moods change quickly. Anxious, fearful, uncertain, Too many choices confuse me",
+      "option2": "Strong Emotions, Ambitious and like to make plans, I get irritated when get interrupted",
+      "option3": "Calm and happy and peace-loving"
+    },
+    "question7": "My reaction to stress",
+    "answer7": {
+      "option1": "Get angry quickly and calm down quickly",
+      "option2": "Once get angry, difficult to calm down",
+      "option3": "Rarely get angry"
+    },
+    "question8": "My Personality is",
+    "answer8": {
+      "option1": "Light of heart and quick to speak",
+      "option2": "Strong will, passionate leader",
+      "option3": "Easy Personality, loving and caring"
+    },
+    "question9": "My Concentration is",
+    "answer9": {
+      "option1": "Easy to get distracted",
+      "option2": "Moderate, depends upon how interesting is the topic",
+      "option3": "Hard to get distracted"
+    },
+    "question10": "My Plan for the next five years",
+    "answer10": {
+      "option1": "I have multiple plans, I do like changes but I am also sometimes worried about my future",
+      "option2": "I want to grow in my career, to have more responsibility and appreciation, I have a clear plan to have security and resources.",
+      "option3": "I dislike too many changes in my life, I need more time to rest, relax and to be by myself."
+    }
   }
-}
+]
