@@ -149,14 +149,20 @@ class answer extends StatelessWidget {
       height: 80,
       decoration: BoxDecoration(
           color: Colors.yellow, borderRadius: BorderRadius.circular(20)),
-      child: Center(
-          child: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Text(
-          answerText,
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-        ),
-      )),
+      child: ElevatedButton(
+        style: ButtonStyle(),
+        onPressed: () {
+          print('object');
+        },
+        child: Center(
+            child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text(
+            answerText,
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+        )),
+      ),
     );
   }
 }
