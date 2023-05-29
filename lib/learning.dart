@@ -31,6 +31,27 @@ List<String> answers = [
   "Like multiple tasks at a time",
   "Selective Task at a time",
   "Need stimulation to do work",
+  "Hard to fall asleep and stay asleep",
+  "Goal-oriented sleep",
+  "Easily fall asleep and can\n sleep for a long time",
+  "Frequently and easily triggered",
+  "Turns on strongly to reach \na goal and then turn off",
+  "Not easily evoked",
+  "Moods change quickly. Anxious, fearful, uncertain, Too many choices confuse me",
+  "Strong Emotions, Ambitious and like to make plans, I get irritated when get interrupted",
+  "Calm and happy and peace-loving",
+  "Get angry quickly and calm down quickly",
+  "Once get angry, difficult to calm down",
+  "Rarely get angry",
+  "Light of heart and quick to speak",
+  "Strong will, passionate leader",
+  "Easy Personality, loving and caring",
+  "Easy to get distracted",
+  "Moderate, depends upon\n how interesting is the topic",
+  "Hard to get distracted",
+  "I have multiple plans, I do like changes but I am also sometimes worried about my future",
+  "I want to grow in my career, to have more responsibility and appreciation, I have a clear plan to have security and resources.",
+  "I dislike too many changes in my life, I need more time to rest, relax and to be by myself.",
 ];
 
 int questionNumber = 0;
@@ -133,7 +154,7 @@ class answer extends StatelessWidget {
         padding: EdgeInsets.all(8.0),
         child: Text(
           answerText,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
       )),
     );
