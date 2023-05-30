@@ -152,7 +152,7 @@ class answer extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(),
         onPressed: () {
-          print('object');
+          print('Github Streak');
         },
         child: Center(
             child: Padding(
