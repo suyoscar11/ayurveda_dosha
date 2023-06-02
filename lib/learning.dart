@@ -103,15 +103,9 @@ class _LearningState extends State<Learning> {
                 color: Colors.red,
                 child: Column(
                   children: [
-                    answer(
-                      answerText: answers[a],
-                    ),
-                    answer(
-                      answerText: answers[b],
-                    ),
-                    answer(
-                      answerText: answers[c],
-                    ),
+                    answer(answerText: answers[a], ifPressed: () {}),
+                    answer(answerText: answers[b], ifPressed: () {}),
+                    answer(answerText: answers[c], ifPressed: () {}),
                     const SizedBox(
                       height: 20,
                     ),
@@ -150,8 +144,9 @@ class _LearningState extends State<Learning> {
 
 class answer extends StatelessWidget {
   final String answerText;
+  final Function ifPressed;
 
-  answer({required this.answerText});
+  answer({required this.answerText, required this.ifPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -164,9 +159,7 @@ class answer extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.transparent),
         ),
-        onPressed: () {
-          print('Github Streak');
-        },
+        onPressed: ifPressed(),
         child: Center(
             child: Padding(
           padding: EdgeInsets.all(8.0),
