@@ -117,9 +117,12 @@ class _LearningState extends State<Learning> {
                               a = a + 3;
                               b = b + 3;
                               c = c + 3;
-                              // if (questionNumber >= questions.length - 1) {
-                              //   print('object');
-                              // }
+                              if (questionNumber > questions.length) {
+                                questionNumber = 0;
+                                a = 0;
+                                b = 0;
+                                c = 0;
+                              }
                             });
 
                             // print(questionNumber);
