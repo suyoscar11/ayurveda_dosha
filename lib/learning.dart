@@ -61,6 +61,15 @@ int c = 2;
 int integer = 1;
 
 class _LearningState extends State<Learning> {
+  void resetQuiz() {
+    setState(() {
+      questionNumber = 0;
+      a = answers.length - answers.length;
+      b = answers.length - (answers.length - 1);
+      c = answers.length - (answers.length - 2);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -117,11 +126,10 @@ class _LearningState extends State<Learning> {
                               a = a + 3;
                               b = b + 3;
                               c = c + 3;
-                              if (questionNumber > questions.length) {
-                                questionNumber = 0;
-                                a = 0;
-                                b = 0;
-                                c = 0;
+                              if (questionNumber >= questions.length) {
+                                resetQuiz();
+                              } else {
+                                print("Continue");
                               }
                             });
 
@@ -153,7 +161,9 @@ class answer extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.yellow, borderRadius: BorderRadius.circular(20)),
       child: ElevatedButton(
-        style: ButtonStyle(),
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(Colors.transparent),
+        ),
         onPressed: () {
           print('Github Streak');
         },
