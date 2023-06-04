@@ -27,7 +27,7 @@ List<String> answers = [
   "Methodical Thinking and action",
   "I learn quickly and forget quickly",
   "Purposeful learning",
-  "Learn slowly with high level of retention",
+  "Learn slowly with high retention",
   "Like multiple tasks at a time",
   "Selective Task at a time",
   "Need stimulation to do work",
@@ -103,9 +103,21 @@ class _LearningState extends State<Learning> {
                 color: Colors.red,
                 child: Column(
                   children: [
-                    answer(answerText: answers[a], ifPressed: () {}),
-                    answer(answerText: answers[b], ifPressed: () {}),
-                    answer(answerText: answers[c], ifPressed: () {}),
+                    answer(
+                        answerText: answers[a],
+                        ifPressed: () {
+                          print('lala');
+                        }),
+                    answer(
+                        answerText: answers[b],
+                        ifPressed: () {
+                          print('lalala');
+                        }),
+                    answer(
+                        answerText: answers[c],
+                        ifPressed: () {
+                          print('lalalala');
+                        }),
                     const SizedBox(
                       height: 20,
                     ),
@@ -122,8 +134,6 @@ class _LearningState extends State<Learning> {
                               c = c + 3;
                               if (questionNumber >= questions.length) {
                                 resetQuiz();
-                              } else {
-                                print("Continue");
                               }
                             });
 
@@ -145,6 +155,7 @@ class _LearningState extends State<Learning> {
 class answer extends StatelessWidget {
   final String answerText;
   final Function ifPressed;
+  bool isSelected = true;
 
   answer({required this.answerText, required this.ifPressed});
 
@@ -153,11 +164,10 @@ class answer extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 30, top: 40, right: 30),
       height: 80,
-      decoration: BoxDecoration(
-          color: Colors.yellow, borderRadius: BorderRadius.circular(20)),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.transparent),
+          backgroundColor: MaterialStateProperty.all(Colors.yellow),
         ),
         onPressed: ifPressed(),
         child: Center(
@@ -165,7 +175,10 @@ class answer extends StatelessWidget {
           padding: EdgeInsets.all(8.0),
           child: Text(
             answerText,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.black87),
           ),
         )),
       ),
