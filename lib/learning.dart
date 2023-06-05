@@ -100,13 +100,13 @@ class _LearningState extends State<Learning> {
           Expanded(
               flex: 3,
               child: Container(
-                color: Colors.red,
+                color: Color.fromARGB(255, 7, 135, 144),
                 child: Column(
                   children: [
                     answer(
                         answerText: answers[a],
                         ifPressed: () {
-                          print('lala');
+                          getColor(Colors.white, Colors.green);
                         }),
                     answer(
                         answerText: answers[b],
@@ -155,7 +155,6 @@ class _LearningState extends State<Learning> {
 class answer extends StatelessWidget {
   final String answerText;
   final Function ifPressed;
-  bool isSelected = true;
 
   answer({required this.answerText, required this.ifPressed});
 
@@ -167,8 +166,7 @@ class answer extends StatelessWidget {
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.yellow),
-        ),
+            backgroundColor: MaterialStateProperty.all<Color>(Colors.yellow)),
         onPressed: ifPressed(),
         child: Center(
             child: Padding(
@@ -184,4 +182,15 @@ class answer extends StatelessWidget {
       ),
     );
   }
+}
+
+MaterialStateProperty<Color> getColor(Color color, Color colorPressed) {
+  final getColo = (Set<MaterialState> states) {
+    if (states.contains(MaterialState.pressed)) {
+      return colorPressed;
+    } else {
+      return color;
+    }
+  };
+  return MaterialStateProperty.resolveWith(getColo);
 }

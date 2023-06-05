@@ -1,3 +1,4 @@
+import 'package:ayurveda_dosha/elevatedButton.dart';
 import 'package:ayurveda_dosha/homepage.dart';
 import 'package:ayurveda_dosha/learning.dart';
 import 'package:flutter/material.dart';
